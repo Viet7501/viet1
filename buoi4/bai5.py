@@ -1,4 +1,8 @@
-n = str(input('Nhập n: '))
+s = str(input('Nhập s: '))
+so = ' '
 
-print(n)
-print(type(n))
+for i in s:
+    if '0' < i < '9':
+        so += i
+print("Các ký tự số có trong chuỗi là")
+print(so)
