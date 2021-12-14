@@ -12,4 +12,4 @@ our_dict = {
 }
 
 for i in our_dict:
-    print(f'{i} : {our_dict[i][5]}')
+    print(f'{i} : {our_dict[i][4]}')
