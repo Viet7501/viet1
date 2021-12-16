@@ -5,14 +5,17 @@ trả lại tất cả các vị trí mà x xuất hiện trong a_list, nếu kh
 """
 
 def find_x(a_list, x):
-    if x not in a_list:
-        print(-1)
+    list1 = []
+
+    for i in range(len(a_list)):
+        if a_list[i] == x:
+            list1.append(i)
+    if len(list1) < 1:
+        return -1
     else:
-        for i in range(len(a_list)):
-            if a_list[i] == x:
-                print(i, end=' ')
+        return list1
 
 
-find_x(['a', 'a', 'b', 'c', 'a'], 'a')
+print(find_x(['a', 'a', 'b', 'c', 'a'], 'a'))
 print('\n')
-find_x([1, 2, 3, 4, 5, 3, 3, 7], 3)
+print(find_x([1, 2, 3, 4, 5, 3, 3, 7], 3))
