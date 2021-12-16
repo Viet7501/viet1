@@ -6,18 +6,18 @@ Viết hàm
 """
 
 
-def is_pangram(str, alphabet='abcdefghijklmnopqrstuvwxyz'):
+def is_pangram(str, alphabet):
     for i in alphabet:
         if i not in str:
             return False
     return True
 
-def pangram(str):
-    if is_pangram(str) == True:
-        print('Là chuỗi Pangram')
-    else:
+def pangram(str, alphabet):
+    if is_pangram(str, alphabet) != True:
         print('Không phải chuỗi Pangram')
+    else:
+        print('Là chuỗi Pangram')
 
-pangram('A quick brown fox jumps over the lazy dog')
-pangram('A quick brown fox jumps over the lazy dog 123')
-pangram('Hello my name is Viet')
+
+pangram('A quick brown fox jumps over the lazy dog', 'abcdefghijklmnopqrstuvwxyz')
+pangram('Hello my name is Viet', 'abcd')
