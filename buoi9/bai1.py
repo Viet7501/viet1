@@ -6,8 +6,8 @@ trả lại cả giá trị max, min của nhiều số được truyền vào
 
 
 def max_min(*numbers):
-    max_number = 0
-    min_number = 0
+    max_number = number[0]
+    min_number = number[0]
     for number in numbers:
         if number >= max_number:
             max_number = number
