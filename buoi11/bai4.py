@@ -10,21 +10,22 @@ Giải quyết yêu cầu sau:
 
 
 class Pets:
-    name = []
 
-    def __init__(self, name):
-        self.name = name
+    dogs = []
+
+    def __init__(self, dogs):
+        self.dogs = dogs
 
     def walk(self):
-        print(f'{self.name} is walking! ')
+        print(f'{self.dogs} is walking!')
 
 
-class Dog(Pets):
+class Dog:
     species = 'mammal'
     is_hungry = True
 
     def __init__(self, name, age):
-        super().__init__(name)
+        self.name = name
         self.age = age
 
     def description(self):
@@ -37,7 +38,7 @@ class Dog(Pets):
         self.is_hungry = False
 
     def walk(self):
-        print(f'{self.name} is walking! ')
+        print(f'{self.name} is walking!')
 
 
 class RussellTerrier(Dog):
@@ -50,10 +51,16 @@ class Bulldog(Dog):
         return f'{self.name} runs {speed}'
 
 
-dog1 = Dog('Tom', 5)
-dog2 = Dog('Jerry', 2)
-dog3 = Dog('Butt', 1)
+dog1 = Dog('Tom', 6)
+dog2 = Dog('Jerry', 9)
+dog3 = Dog('Butt', 3)
 
-Pets.walk(dog1)
-Pets.walk(dog2)
-Pets.walk(dog3)
+Pets.dogs.append(dog1.name)
+Pets.dogs.append(dog2.name)
+Pets.dogs.append(dog3.name)
+
+for i in Pets.dogs:
+    pet = Pets(i)
+    pet.walk()
+    
+    
